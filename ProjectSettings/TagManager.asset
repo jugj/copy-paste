@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Boden
+  - licht
   layers:
   - Default
   - TransparentFX
