@@ -2,20 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class kill : MonoBehaviour
+public class Kill : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnCollisionEnter(Collision collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.)
+        Debug.Log("Collided with: " + collision.gameObject.name);
+        if (collision.gameObject.CompareTag("Player"))
         {
-            set 
+            // Setze die neue Position
+            collision.gameObject.transform.position = new Vector2(-9.554f, 2.395f);
         }
     }
 }
