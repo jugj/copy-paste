@@ -6,6 +6,8 @@ public class playerbewegung : MonoBehaviour
 {
     public float jumpforce = 5f;
     public float movementspeed = 10f;
+    public int Health = 100;
+    public int Healthp = 100;
     void Start()
     {
         
@@ -25,6 +27,27 @@ public class playerbewegung : MonoBehaviour
         if(Input.GetKey("a"))
         {
             transform.Translate(Vector2.left * Time.deltaTime * movementspeed);
+        }
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            transform.Translate(Vector2.down * Time.deltaTime);
+        }
+        if(Health != Healthp)
+        {
+            Debug.Log(Health);
+        }
+        if(Health != Healthp)
+        {
+            Healthp = Health;
+        }
+    }
+
+    public void bekommeschaden(int schaden)
+    {
+        Health = Health - schaden;
+        if(Health <= 0)
+        {
+            Debug.Log("der spieler ist tot");
         }
     }
 }
