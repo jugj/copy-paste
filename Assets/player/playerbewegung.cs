@@ -6,7 +6,7 @@ public class playerbewegung : MonoBehaviour
 {
     public float jumpforce = 10f;
     public float movementspeed = 10f;
-    public int Health = 100;
+    public static int Health = 100;
     public int Healthp = 100;
     void Start()
     {
