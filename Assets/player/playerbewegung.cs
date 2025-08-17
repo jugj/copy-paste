@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class playerbewegung : MonoBehaviour
 {
+    public Transform spawnpunkt;
+    public Switch sw;
     public float jumpforce = 10f;
     public float movementspeed = 10f;
     public static int Health = 100;
@@ -47,7 +49,8 @@ public class playerbewegung : MonoBehaviour
         Health = Health - schaden;
         if(Health <= 0)
         {
-            Debug.Log("der spieler ist tot");
+            sw.switchToLight();
+            transform.position = spawnpunkt.position;
         }
     }
 }

@@ -13,7 +13,7 @@ public class rotationb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Switch.realm == 1)
+        if(Switch.realm == 1f)
         {
             transform.eulerAngles = Vector3.right * 0;
         }
